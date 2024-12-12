@@ -1,0 +1,142 @@
+body, h1, h2, h3, p, a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Layout generale */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #282c34;
+    color: white;
+}
+
+header h1 {
+    font-size: 2.5rem;
+}
+
+/* Articoli */
+.article-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.article-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.article-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.article-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
+
+.article-card h3 {
+    font-size: 1.2rem;
+    margin: 15px;
+}
+
+.article-card p {
+    font-size: 0.9rem;
+    margin: 0 15px 15px;
+    color: #666;
+}
+
+.article-card a {
+    display: block;
+    background: #282c34;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid #ddd;
+    font-weight: bold;
+    transition: background 0.2s ease;
+}
+
+.article-card a:hover {
+    background: #444;
+}
+
+/* Pagina dettaglio articolo */
+.article-detail {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.article-detail img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.article-detail h1 {
+    margin: 20px 0 10px;
+    font-size: 2rem;
+    color: #282c34;
+}
+
+.article-detail p {
+    margin: 10px 0;
+}
+
+.article-detail a {
+    display: inline-block;
+    margin-top: 20px;
+    background: #282c34;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.2s ease;
+}
+
+.article-detail a:hover {
+    background: #444;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .article-card h3 {
+        font-size: 1rem;
+    }
+
+    .article-detail h1 {
+        font-size: 1.5rem;
+    }
+}

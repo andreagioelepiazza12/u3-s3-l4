@@ -1,7 +1,7 @@
 // src/components/ArticleList.tsx
 import React, { useState, useEffect } from 'react';
 import ArticleCard from './ArticleCard';
-import { Article } from '../types/article';
+import { Article } from '../interfaces/Article';
 
 const ArticleList = () => {
     const [articles, setArticles] = useState<Article[]>([]);

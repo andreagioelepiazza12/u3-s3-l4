@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { Article } from '../types/article';
+import { Article } from '../interfaces/Article';
 
-const ArticlePage = () => {
+const ArticlePage: React.FC = () => {
     const { id } = useParams<{ id: string }>();
     const [article, setArticle] = useState<Article | null>(null);
 
